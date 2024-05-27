@@ -58,7 +58,7 @@ public class User {
 	@JsonFormat(pattern = "dd-MM-yyyy", timezone = "Asia/Istanbul")
 	Date birthDate;
 
-	@Column(nullable = false, length = 64)
+	@Column(nullable = false, length = 64,unique = true)
 	@Length(min = 0, max = 64)
 	private String email;
 

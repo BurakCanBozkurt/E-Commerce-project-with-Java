@@ -1,4 +1,4 @@
-package com.startech.person.controller;
+package com.startech.person.controller.user;
 
 import lombok.AllArgsConstructor;
 

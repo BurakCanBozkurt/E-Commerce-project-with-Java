@@ -19,6 +19,20 @@ services:
       PGADMIN_DEFAULT_PASSWORD: startech
     ports:
       - "8090:80"
-
     depends_on:
       - postgres
+
+  app:
+    image: bcan/leo:latest  # Docker Hub'dan çekeceğimiz image
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/example
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: example
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_DATABASE_PLATFORM: org.hibernate.dialect.PostgreSQLDialect
+      APP_JWT_SECRET: 32502afd077e4c38bb1c9f7ee2069b0d12qty54erf1
+      APP_JWT_EXPIRATION_MILLISECONDS: 1340000

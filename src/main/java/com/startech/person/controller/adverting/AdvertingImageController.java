@@ -1,4 +1,4 @@
-package com.startech.person.controller;
+package com.startech.person.controller.adverting;
 
 import com.startech.person.service.abstracts.adverting.AdvertingImageService;
 import com.startech.person.service.dto.response.user.get.GetAdvertingImageDto;

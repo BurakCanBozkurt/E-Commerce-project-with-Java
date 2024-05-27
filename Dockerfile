@@ -8,4 +8,4 @@ WORKDIR /app
 COPY target/person-0.0.1-SNAPSHOT.jar app.jar
 
 # Uygulama başlatma komutu
-ENTRYPOINT  ["java", "-jar", "app.jar"]
+CMD  ["java", "-jar", "app.jar"]
