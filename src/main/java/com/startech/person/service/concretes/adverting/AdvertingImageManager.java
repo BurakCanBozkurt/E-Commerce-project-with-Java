@@ -37,7 +37,7 @@ public class AdvertingImageManager implements AdvertingImageService {
         for (MultipartFile file : multipartFileList) {
             try {
                 String fileName = UUID.randomUUID().toString() + "_" + file.getOriginalFilename();
-                String filePath = "C:/Users/burak/OneDrive/Masaüstü/Resimler2/" + fileName;
+                String filePath = "src/main/resources/advertingimages/" + fileName;
                 file.transferTo(new File(filePath));
                 generalAdvertingImageList.add(new GeneralAdvertingImage(new Date(), new Date(), generalAdverting, filePath));
             } catch (IOException e) {
